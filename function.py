@@ -20,7 +20,7 @@ def average(marks, function):
     if type(function[0]) is not list and type(function[2]) is not list:
         # If we have we have an type <<int>> it means that is an index of marks
         if type(function[0]) is int:
-            return round(eval(f'{marks[function[0]]} {function[1]} {function[2]}'), 2) #Apliess the formula
+            return round(eval(f'{marks[function[0]]} {function[1]} {function[2]}'), 2) #Apply the formula
         # If not it means that we already have access to marks with an index
         else:
             return round(eval(f'{function[0]} {function[1]} {function[2]}'), 2) #Apliess the formula
