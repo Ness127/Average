@@ -13,7 +13,7 @@ def average(marks, function):
             -A list with the same structure as function.
     
     Returns:
-    ·Float : your mark
+    ·Float : your final mark
     '''
     
     #We establish the base case for an expresion like this: [0, '*', 0.5]
@@ -21,12 +21,12 @@ def average(marks, function):
         # If we have we have an type <<int>> it means that is an index of marks
         if type(function[0]) is int:
             return round(eval(f'{marks[function[0]]} {function[1]} {function[2]}'), 2) #Apliess the formula
-        # If not it means that we already have acces to marks with an index
+        # If not it means that we already have access to marks with an index
         else:
             return round(eval(f'{function[0]} {function[1]} {function[2]}'), 2) #Apliess the formula
     #We establish the general case for an expresion like this: [[0, '*', 0.5], '+', [1, '*', 0.5]]
     else:
-        #if the first term is a list it turned into a floar by using the same function
+        #if the first term is a list, this will call the function again to give back a specific number
         if type(function[0]) is list:
             first = average(marks, function[0])
             function[0] = first
